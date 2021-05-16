@@ -1,3 +1,2 @@
-# Algorithm-Task
-A simple program that converts values in fahreinheit to celsius
+# Zuri Frontend Algorithm-Tasks
 Demo at https://ozo-vehe.github.io/Algorithm-Task/
