@@ -1,16 +1,10 @@
-let result = document.querySelector(".user-result"),
-    yuGiOhResult = document.querySelector(".result");
-
-
-result.textContent = 0;
 
 /*************      CONVERT FAHREINHEIT TO CELSIUS FUNCTION     ***********/
 function convertFahrToCelsius(value) {
     let initialAnswer = (value - 32) / 1.8;
     let finalAnswer = Number(initialAnswer.toFixed(4));
 
-    if(typeof(value) == "number") {
-        result.textContent = finalAnswer;
+    if(typeof(value) == "number")
         console.log(finalAnswer);
     }
     else if(typeof(value) != "number") {
@@ -21,16 +15,13 @@ function convertFahrToCelsius(value) {
         if(newArr.toString() == "NaN" && Array.isArray(value) == false) {
             if(Object.values(value).length && typeof(value) != "string") {
                 for(const i in value) {
-                    result.textContent = `{${i}, ${value[i]}} is not a valid number but a/an ${typeof(value)}`;
                     console.log(`{${i}, ${value[i]}} is not a valid number but a/an ${typeof(value)}`)
                 }
             }
             else if(Object.values(value).length == 0) {
-                result.textContent = `{} is not a valid number but a/an ${typeof(value)}`;
                 console.log(`{} is not a valid number but a/an ${typeof(value)}`)
             }
             else if (typeof(value) == "string") {
-                result.textContent = `${value} is not a valid number but a/an ${typeof(value)}`;
                 console.log(`${value} is not a valid number but a/an ${typeof(value)}`)
             }
         }    
@@ -40,11 +31,11 @@ function convertFahrToCelsius(value) {
             let newInitialAnswer = (valueTwo - 32) / 1.8;
             let newFinalAnswer = Number(newInitialAnswer.toFixed(4));
 
-            result.textContent = newFinalAnswer;
+          
             console.log(newFinalAnswer)
         }
         if(typeof(value) != "number" && value.length == 0 || Array.isArray(value)) {
-            result.textContent = `[${value}] is not a valid number but a/an array`;
+   
             
             console.log(`[${value}] is not a valid number but a/an array`);
         }
@@ -86,13 +77,11 @@ function checkYoGiOh(n) {
         }
     })
     if(typeof(num) != "number" || newArray.length == 0) {
-        yuGiOhResult.textContent = `Invalid parameter: ${n}`
-
+        
         console.log(`Invalid parameter: ${n}`);
     }
     else if(newArray.length != 0) {
-        yuGiOhResult.textContent = `[${newArray}]`;
-
+        
         console.log(newArray)
     }
 }
